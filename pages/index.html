@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Productos</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Productos</h1>
+
+        <form id="agregarProductoForm" class="form-inline">
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="number" id="cantidad" placeholder="Cantidad" required>
+            <input type="number" id="precio" placeholder="Precio" required>
+            <button type="submit">Agregar Producto</button>
+        </form>
+
+        <form id="actualizarProductoForm" class="form-inline" style="display:none;">
+            <button type="button" id="cancelClick" class="cancel-btn" onclick="toggleForm('actualizarProductoForm')">✖</button>
+            <input type="hidden" id="idActualizar">
+            <input type="text" id="nombreActualizar" placeholder="Nombre" required>
+            <input type="number" id="cantidadActualizar" placeholder="Cantidad" required>
+            <input type="number" id="precioActualizar" placeholder="Precio" required>
+            <button type="submit">Actualizar Producto</button>
+        </form>
+
+        <table id="productosTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Productos se mostrarán aquí -->
+            </tbody>
+        </table>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>
